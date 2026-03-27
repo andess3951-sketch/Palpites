@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagamento</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="container">
+
+  <h2 style="text-align:center; margin-bottom:15px;">
+    Pagamento via PIX
+  </h2>
+
+  <div class="pix-box">
+
+    <p style="font-size:16px;">
+      Valor: <strong>R$ 9,90</strong>
+    </p>
+
+    <p>Chave PIX:</p>
+
+    <div class="pix-chave">
+      5fdeecdf-10eb-47ae-95bc-a4f1f5170744
+    </div>
+
+    <button onclick="copiarPix()">Copiar chave</button>
+
+    <div class="codigo-gerado" style="margin-top:15px;">
+      ⚠️ Após o pagamento, solicite o código no WhatsApp
+    </div>
+
+    <a href="index.html">
+      <button style="background:#555; margin-top:10px;">
+        Voltar
+      </button>
+    </a>
+
+  </div>
+
+</div>
+
+<script>
+function copiarPix() {
+  navigator.clipboard.writeText("5fdeecdf-10eb-47ae-95bc-a4f1f5170744");
+  alert("Chave PIX copiada!");
+}
+</script>
+
+</body>
+</html>

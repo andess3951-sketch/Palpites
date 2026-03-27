@@ -1,0 +1,255 @@
+/* RESET IMPORTANTE (corrige bugs mobile) */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #0a7f3f, #0a3, #002b5c);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 12px;
+}
+
+/* ALERTA */
+.alerta {
+  background: #ffcc00;
+  color: black;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+/* CARD */
+.card {
+  background: #0b6623;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  width: 100%;
+}
+
+/* TOPO */
+.topo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  gap: 5px;
+}
+
+/* BADGE */
+.badge {
+  background: #00c853;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* TITULO */
+h2 {
+  font-size: 20px;
+  margin: 10px 0 5px;
+  line-height: 1.2;
+}
+
+/* PARÁGRAFOS */
+p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* INFO */
+.info {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.info div {
+  flex: 1;
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+/* PALPITE */
+.palpite {
+  background: #eee;
+  color: black;
+  padding: 18px;
+  border-radius: 12px;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* BOTÃO */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #00c853;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* INPUT */
+.codigo {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.codigo input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}
+
+/* PIX */
+.pix-box {
+  background: #0b6623;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.pix-chave {
+  background: white;
+  color: black;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+.codigo-gerado {
+  font-size: 16px;
+  background: #ffcc00;
+  color: black;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  width: 50px;
+  height: 50px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 1.5s infinite;
+  z-index: 999;
+}
+
+.whatsapp-float svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* ANIMAÇÃO */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37,211,102, 0.7);
+  }
+  70% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 10px rgba(37,211,102, 0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 📱 MOBILE PERFEITO */
+@media (max-width: 480px) {
+
+  header {
+    font-size: 18px;
+    padding: 14px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .info {
+    flex-direction: column;
+  }
+
+  .codigo {
+    flex-direction: column;
+  }
+
+  .codigo button {
+    width: 100%;
+  }
+
+  .palpite {
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 11px;
+  }
+
+  .whatsapp-float {
+    width: 46px;
+    height: 46px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-float svg {
+    width: 22px;
+    height: 22px;
+  }
+}
